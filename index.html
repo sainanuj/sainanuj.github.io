@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hello world!</title>
+    <title>Anuj Sain | Self-Taught Programmer</title>
+    
+    <!-- Google Fonts for typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
+    
+    <!-- Retaining original Google AdSense script -->
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({
@@ -14,21 +20,94 @@
             enable_page_level_ads: true
         });
     </script>
-
 </head>
 <body>
-    <div class="container">
-        <div class="middle">
-            <div class="inner">
-                <div id="name" class="name">
-                    <h1>Anuj Sain</h1>
-                </div>
-                <div class="about">
-                    A computer hobbyist.
-                </div>
-            </div>
+    <!-- Background styling elements -->
+    <div class="background-grid"></div>
+    <div class="blob"></div>
+    
+    <nav>
+        <div class="logo">AS.</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
         </div>
-    </div>
+    </nav>
+
+    <main class="container">
+        <!-- Hero Section with Terminal Effect -->
+        <section id="about" class="hero">
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="title">~/portfolio</span>
+            </div>
+            <div class="terminal-body">
+                <p class="prompt"><span class="user">anuj@localhost</span>:<span class="dir">~</span>$ <span id="typewriter"></span><span class="cursor">_</span></p>
+            </div>
+            <h1 class="visually-hidden">Anuj Sain - Computer Hobbyist</h1>
+            <p class="subtitle">I'm a self-taught programmer with a deep passion for computing. I build everything from low-level systems logic to responsive web applications.</p>
+            <a href="#skills" class="btn">Explore My Stack</a>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="skills-section">
+            <h2 class="section-title">Technical Arsenal</h2>
+            <div class="skills-grid">
+                
+                <!-- Skill Card 1 -->
+                <div class="skill-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Systems & Core</h3>
+                    <p>Building the foundation with performance and memory management in mind.</p>
+                    <div class="tags">
+                        <span>C</span>
+                        <span>C++</span>
+                        <span>Go</span>
+                        <span>Java</span>
+                        <span>Python</span>
+                    </div>
+                </div>
+
+                <!-- Skill Card 2 -->
+                <div class="skill-card">
+                    <div class="card-icon">🌐</div>
+                    <h3>Web Technologies</h3>
+                    <p>Crafting accessible, responsive, and highly dynamic user interfaces.</p>
+                    <div class="tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript (ES6+)</span>
+                    </div>
+                </div>
+
+                <!-- Skill Card 3 -->
+                <div class="skill-card">
+                    <div class="card-icon">🚀</div>
+                    <h3>Frameworks</h3>
+                    <p>Scaling full-stack applications with modern industry-standard tooling.</p>
+                    <div class="tags">
+                        <span>React</span>
+                        <span>Next.js</span>
+                        <span>Redux</span>
+                        <span>Django</span>
+                        <span>Flask</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>Let's build something awesome together.</p>
+        <a href="https://github.com/sainanuj" target="_blank" class="footer-link">GitHub</a> | 
+        <a href="mailto:hello@example.com" class="footer-link">Get in touch</a>
+    </footer>
+
+    <script src="scripts/main.js"></script>
 </body>
-<script src="scripts\\main.js"></script>
 </html>
