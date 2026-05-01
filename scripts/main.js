@@ -7,25 +7,25 @@ document.addEventListener('DOMContentLoaded', () => {
     function typeWriter() {
         if (charIndex < text.length) {
             const char = text.charAt(charIndex);
-            
+
             // Check for newline character to render as HTML break
             if (char === '\n') {
                 typewriterElement.innerHTML += '<br>';
             } else {
                 typewriterElement.innerHTML += char;
             }
-            
+
             charIndex++;
-            
+
             // Randomize typing speed for a realistic mechanical feel
             const speed = Math.random() * 60 + 30; // 30ms to 90ms
-            
+
             // Pause longer on punctuation and newlines
             let delay = speed;
             if (char === '.' || char === '\n') {
                 delay += 400;
             }
-            
+
             setTimeout(typeWriter, delay);
         }
     }
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
-            
+
             if (targetElement) {
                 targetElement.scrollIntoView({
                     behavior: 'smooth',
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.transform = "translateY(30px)";
         // Stagger the transition delay based on index
         card.style.transition = `opacity 0.6s ease ${index * 0.15}s, transform 0.6s ease ${index * 0.15}s`;
-        
+
         // Start observing
         scrollObserver.observe(card);
     });
